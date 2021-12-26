@@ -2,6 +2,8 @@ import './register.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios';
+import API from '../../api'
+
 
 export default function Register() {
     const [username, setUsername] = useState(" ");
@@ -13,7 +15,7 @@ export default function Register() {
         e.preventDefault();
         setError(false)
         try {
-            const response = await axios.post('/auth/register', {
+            const response = await axios.post(`${API}/api/auth/register`, {
             username, email, password
         });
         response.data && window.location.replace("/login")

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import API from '../../api'
 
 export default function Sidebar() {
     let myLink = '/categories'
@@ -17,7 +18,7 @@ export default function Sidebar() {
 
     useEffect(() => {
       const getCat = async () => {
-          const response = await axios.get('/categories');
+          const response = await axios.get(`${API}/api/categories`);
           setCategory(response.data.cats);
       }
       getCat();

@@ -2,10 +2,12 @@ import  './topbar.css'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { Context } from '../../context/Context';
+import API from '../../api'
+
 
 export default function TopBar() {
     const { user, dispatch } = useContext(Context);
-    const PF = " https://uzerefoods.herokuapp.com/images/"
+    const PF = `${API}/images/`
 
     const handleLogout = (e) => {
         e.preventDefault();

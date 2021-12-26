@@ -3,6 +3,8 @@ import './settings.css'
 import { useContext, useState } from 'react'
 import { Context } from '../../context/Context';
 import axios from 'axios'
+import API from '../../api'
+
 
 export default function Settings() {   
 
@@ -13,7 +15,7 @@ export default function Settings() {
     const [success, setSuccess] = useState(false);
     const { user, dispatch } = useContext(Context);
 
-    const PF = " https://uzerefoods.herokuapp.com/images/"
+    const PF = `${API}/images/`
         
      const handleSubmit = async(e) => {
         e.preventDefault();
@@ -28,11 +30,11 @@ export default function Settings() {
             updatedUser.profilePic = filename;
            
             try {
-                await axios.post('/upload', data)
+                await axios.post(`${API}/api/upload`, data)
             } catch (error) {  }
         }
         try {
-            const response = await axios.put('/users/' + user._id, updatedUser);  
+            const response = await axios.put(`${API}/api/users/` + user._id, updatedUser);  
             setSuccess(true);
             dispatch({type:"UPDATE_SUCCESS", payload: response.data});
             window.location.replace('/');

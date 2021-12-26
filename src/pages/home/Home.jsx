@@ -5,6 +5,9 @@ import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts'
 import Sidebar from '../../components/sidebar/Sidebar'
 import axios from "axios";
+import API from '../../api'
+
+
 
 import './home.css'
 import logo from '../../components/assets/logo.png'
@@ -17,7 +20,7 @@ export default function Home() {
    
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await axios.get("/posts" +  search)
+            const response = await axios.get(`${API}/api/posts${search}`)
             setPosts(response.data.posts)
         }
         fetchPosts();

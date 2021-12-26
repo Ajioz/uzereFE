@@ -2,6 +2,7 @@ import './write.css'
 import { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
+import API from '../../api'
 
 
 export default function Write() {
@@ -16,7 +17,7 @@ export default function Write() {
     useEffect(() => {
         const getCat = async () => {
             let itemCat = [];
-            const response = await axios.get('/categories');
+            const response = await axios.get(`${API}/api/categories`);
             response.data.cats.map((item)=> {
                 return (
                     itemCat.push(item.name)
@@ -41,7 +42,7 @@ export default function Write() {
             data.append('file', file);
             newPost.photo = filename;
             try {
-               const resData =  await axios.post('https://uzerefoods.herokuapp.com/api/upload', data);
+               const resData =  await axios.post(`${API}/api/upload`, data);
                if(resData.status === 201){
                     window.location.replace('/');
                };
@@ -49,10 +50,10 @@ export default function Write() {
             } catch (error) { }
         }
         try {
-            await axios.post('https://uzerefoods.herokuapp.com/api/posts', newPost);
+            await axios.post(`${API}/api/posts`, newPost);
             
             if(verify === undefined) {
-                const resCat =  await axios.post('https://uzerefoods.herokuapp.com/api/categories', {name});
+                const resCat =  await axios.post(`${API}/api/categories`, {name});
                if(resCat.status === 201){   
                     window.location.replace('/');
                }

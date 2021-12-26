@@ -1,10 +1,11 @@
 import './post.css'
 import { Link } from 'react-router-dom'
+import API from '../../api'
 
 
 
 export default function Post({post}) {
-    const PF = " https://uzerefoods.herokuapp.com/images/";
+    const PF = `${API}/images/`;
     return (
         <>
             <Link to = {`/post/${post._id}`}  className="post link" key={post._id} >

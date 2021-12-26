@@ -4,10 +4,12 @@ import axios from 'axios'
 import './singlePost.css';
 import { Link } from "react-router-dom";
 import { Context } from '../../context/Context';
+import API from '../../api'
+
 
 export default function SinglePost() {
 
-    const PF = " https://uzerefoods.herokuapp.com/images/";
+    const PF = `${API}/images/`;
 
     const { postId } = useParams();
     const [post, setPost] = useState({});
@@ -19,7 +21,7 @@ export default function SinglePost() {
 
     useEffect(() => {
         const getPost = async() => {
-            const response = await axios.get("/posts/" + postId);
+            const response = await axios.get(`${API}/api/posts/` + postId);
             setPost(response.data.post);
             setTitle(response.data.post.title);
             setDesc(response.data.post.desc);
@@ -31,14 +33,14 @@ export default function SinglePost() {
 
     useEffect(() => {
         const getCat = async() => {
-            await axios.get("/categories/");
+            await axios.get(`${API}/api/categories/`);
         };
         getCat();
     },[]);
 
     const handleDelete = async() => {
         try {
-            await axios.delete(`/posts/${postId}`, {
+            await axios.delete(`${API}/api/posts/${postId}`, {
                 data: {username: user.username}
             });
             window.location.replace('/');
@@ -48,7 +50,7 @@ export default function SinglePost() {
     const  handleUpdate = async () => {
        const update = { username: user.username, title, desc, name };
        try {
-            await axios.put(`/posts/${postId}`, update);
+            await axios.put(`${API}/api/posts/${postId}`, update);
             setUpdateMode(false)
             window.location.replace('/');
        }catch (error) {
