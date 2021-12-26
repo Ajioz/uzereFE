@@ -8,6 +8,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Sidebar() {
+    let myLink = '/categories'
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
@@ -64,23 +65,23 @@ export default function Sidebar() {
                 <div className="category">
                     <ul className="category-list">
                         <li className="list-items" data-aos="fade-left" data-aos-delay="100">
-                        <a href="#">Software</a>
+                        <a href={myLink}>Software</a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="200">
-                        <a href="#">Technology</a>
+                        <a href={myLink}>Technology</a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="300">
-                        <a href="#">LifeStyle</a>
+                        <a href={myLink}>LifeStyle</a>
                         
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="400">
-                        <a href="#">Shopping</a>
+                        <a href={myLink}>Shopping</a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="500">
-                        <a href="#">Food</a>
+                        <a href={myLink}>Food</a>
                         
                         </li>
                     </ul>

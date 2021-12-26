@@ -13,7 +13,7 @@ export default function Header() {
             <div className="row header" data-aos="fade-left" data-aos-offset="100">
                 <div className="head blue-grey lighten-5">
                     <div className="col s12 m7 l7 headerLeft">
-                        <img className="bizIcon" src={green} className="headerMainLeft responsive-img" alt="content" data-aos="flip-left" data-aos-offset="100"/>
+                        <img src={green} className="headerMainLeft responsive-img bizIcon" alt="content" data-aos="flip-left" data-aos-offset="100"/>
                         <span className="flow-text"></span>
                     </div>
                     <div className="col s12 m5 l5 blue-grey lighten-5 headerLeft">

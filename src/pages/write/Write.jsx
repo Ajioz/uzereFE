@@ -18,7 +18,9 @@ export default function Write() {
             let itemCat = [];
             const response = await axios.get('/categories');
             response.data.cats.map((item)=> {
-                itemCat.push(item.name);
+                return (
+                    itemCat.push(item.name)
+                ) 
             });
             setItems(itemCat);
         }
