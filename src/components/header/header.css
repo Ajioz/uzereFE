@@ -1,0 +1,52 @@
+.head{
+  min-height: 50vh;
+  width: 100%;
+}
+
+.bizIcon{
+  margin-left: 100px;
+}
+
+.headerLeft{
+  margin-top: 3.3%;
+}
+
+.headerRight{
+  top: 13%;
+  font-weight: 500;
+  font-size: 50px;
+  color: #00c853; 
+}
+
+.headerMainLeft {
+  border-radius: 140px 0 0 140px;
+}
+
+.headerRightCont{
+  top: 13%;
+  font-size: 16px;
+  font-family: "Lora", serif;
+  padding: 0 30px;
+}
+
+.blueStrip{
+  width: 100%;
+  height: 10px;
+  background: #0d47a1;
+}
+
+.grayStrip{
+  width: 100%;
+  height: 10px;
+  background: #eceff1;
+  margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
