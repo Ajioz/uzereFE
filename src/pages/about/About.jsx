@@ -15,11 +15,11 @@ export default function About() {
             <div className="row header">
                 <div className="headerTitles">
                     <span className="headerTitleSm">Uzere Food & Industries</span>
-                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}} /></span>
+                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}} alt='comLogo'/></span>
                 </div>
                 <div className="head blue-grey lighten-5">
                     <div className="col s12 m7 l7 headerLeft">
-                        <img className="bizIcon" src={green} className="headerMainLeft responsive-img" alt="content" />
+                        <img src={green} className="headerMainLeft responsive-img bizIcon" alt="content" />
                         <span className="flow-text"></span>
                     </div>
                     <div className="col s12 m5 l5 blue-grey lighten-5 headerLeft">

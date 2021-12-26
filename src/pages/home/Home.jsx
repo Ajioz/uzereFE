@@ -27,7 +27,7 @@ export default function Home() {
             <div className="row header">
                 <div className="headerTitles">
                     <span className="headerTitleSm">Uzere Food & Industries</span>
-                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}} /></span>
+                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}}alt='comLogo' /></span>
                 </div>
             </div>
             < Slider />
