@@ -1,6 +1,14 @@
-.posts{
-    flex: 9;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 20px 20px 20px;
+.posts {
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
+
+@media only screen and (max-width: 520px) {
+  .posts {
+  padding: 0;
+  margin: 0 auto;
+  }
+}
+

@@ -57,7 +57,7 @@
   .logoLeft {
     margin-top: 50px;
     margin: 0 auto;
-    padding-top: 20px;
-    margin-left: -150px;
+    padding-top: 20px; 
+    margin-left: -200px;
   }
 }
