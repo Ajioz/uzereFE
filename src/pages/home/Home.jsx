@@ -17,10 +17,15 @@ import Stat from '../../components/statistics/Stat';
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const {search} = useLocation();
+  
    
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await axios.get(`${API}/api/posts${search}`)
+            //debug MongoDB image fetch
+            response.data.posts.map((item)=>{
+                return  console.log(item.photo)
+            })
             setPosts(response.data.posts)
         }
         fetchPosts();
@@ -39,9 +44,7 @@ export default function Home() {
                 <Posts posts={posts} key={posts.Id}/>
                 <Sidebar />
             </div>
-            <section>
-                <Stat />
-            </section>
+            <section><Stat /></section>
         </>
     )
 }

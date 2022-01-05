@@ -36,7 +36,7 @@ export default function TopBar() {
                     </div>
                 </div>
 
-                <div className="topCenter">
+                <div className="topCenter"> 
                     <ul className="topList nav-items" onClick={()=> setNavToggle(!navToggle)}>
                         <li className="topListItem nav-link"><Link to ="/" className="link"> HOME  </Link></li>
                         <li className="topListItem nav-link"><Link to ="/about" className="link"> ABOUT </Link></li>
@@ -45,19 +45,16 @@ export default function TopBar() {
                         <li className="topListItem nav-link" onClick={handleLogout}>{user && 'LOGOUT'}</li>
                     </ul>
                 </div>
-                <div className="topRight">
+               
+                <div className="topRight" >
                     {
                         user ? (
                         <Link to="/settings" className="link"><img className="topImg" src={PF + user.profilePic} alt="here" /> </Link>  
                         ) : (
-                            <ul className="topList">
+                            <ul className="topList" onClick={()=> setNavToggle(!navToggle)} >
                                 <li className="topListItem">
-                                    <Link to ="/login" className="link"> LOGIN  </Link>
-                                </li>
-                            {/* <li className="topListItem">
-                                    <Link to ="/register" className="link"> REGISTER  </Link>
-                            </li> */}
-                            
+                                    <Link to ="/login" className="link" > LOGIN  </Link>
+                                </li>                           
                             </ul>
                         )
                     }

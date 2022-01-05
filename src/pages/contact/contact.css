@@ -20,7 +20,7 @@ body {
 
 .Icon {
   background-color: rgba(228, 224, 224, 0.3);
-   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   padding: 20px;
   color: #7b7c7c;
@@ -140,9 +140,15 @@ body {
   .map {
     display: none;
   }
+  #contact {
+    margin-top: 30vh;
+  }
+  .cleanup {
+    height: 130vh;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 380px) {
   .socialIcon {
     display: none;
   }

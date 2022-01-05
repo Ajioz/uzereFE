@@ -101,3 +101,12 @@
   cursor: pointer;
   align-self: flex-end;
 }
+
+
+.space {
+  height: 20vh;
+}
+
+.text-space {
+  height: 5vh;
+}

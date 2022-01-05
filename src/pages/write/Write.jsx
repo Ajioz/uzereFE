@@ -26,7 +26,7 @@ export default function Write() {
             setItems(itemCat);
         }
         getCat();
-    }, [name])
+    },[name])
     
     
     const handleSubmit = async(e) => {
@@ -59,7 +59,6 @@ export default function Write() {
                }
             }
         } catch (error) { }
-
     }
 
     return (
@@ -94,7 +93,7 @@ export default function Write() {
                         required
                     />
 
-                     <textarea 
+                    <textarea 
                         placeholder="Tell Your Story..." required
                         type="text" className="writeText" rows={15}
                         onChange={(e) => setDesc(e.target.value)}>

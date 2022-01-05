@@ -19,10 +19,11 @@ export default function Login() {
                 username: userRef.current.value,
                 password: passwordRef.current.value,
             });
-        dispatch({type: "LOGIN_SUCCESS", payload: response.data})
+        dispatch({type: "LOGIN_SUCCESS", payload: response.data});
+        window.location.replace('/');
         } catch (error) {
             dispatch({type: "LOGIN_FAILURE"});
-            window.location.replace('/register');
+            window.location.replace('/login');
         }
     };
 
@@ -49,9 +50,6 @@ export default function Login() {
                     Login
                 </button>
             </form>
-             {/* <button className="loginRegisterButton">
-                 <Link className="link" to="/register">Register</Link>
-             </button> */}
         </div>
     )
 }

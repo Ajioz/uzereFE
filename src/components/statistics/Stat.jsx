@@ -14,19 +14,19 @@ export default function Stat() {
                 <div data-aos="fade-left" data-aos-delay="200">
                 <h5>Fire Protection & Fireproofing</h5>
                 <p>Design of fire protection systems for buildings and structures Procurement & supply of fire protection & fireproofing materials Procurement & supply of fireproofing equipment & accessories Installation of fire protection systems Installation of fireproofing</p>
-                <button className="btn"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
+                <button className="btnz"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
                 </div>
 
                 <div data-aos="fade-left" data-aos-delay="300">
                 <h5>Procurement Services</h5>
                 <p>Design of fire protection systems for buildings and structures Procurement & supply of fire protection & fireproofing materials Procurement & supply of fireproofing equipment & accessories Installation of fire protection systems Installation of fireproofing</p>
-                <button className="btn"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
+                <button className="btnz"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
                 </div>
 
                 <div data-aos="fade-left" data-aos-delay="400">
                 <h5>Supply of Technical Manpower</h5>
                 <p>Design of fire protection systems for buildings and structures Procurement & supply of fire protection & fireproofing materials Procurement & supply of fireproofing equipment & accessories Installation of fire protection systems Installation of fireproofing</p>
-                <button className="btn"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
+                <button className="btnz"><Link to ="/contact" className="btn-blog">Learn More</Link></button>
                 </div>
 
             </div>
@@ -56,7 +56,7 @@ export default function Stat() {
             <p data-aos="fade-left" data-aos-delay="100">
                 We look forward to bringing our traditional dedication to work for your esteemed company.
             </p>
-            <button className="btn form-btn" data-aos="fade-right" data-aos-delay="100"> 
+            <button className="btnz form-btn" data-aos="fade-right" data-aos-delay="100"> 
                 <Link to ="/contact" className="btn-blog"> Contact Us </Link>
             </button>
             </div>

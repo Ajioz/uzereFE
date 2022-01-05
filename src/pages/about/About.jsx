@@ -142,7 +142,7 @@ export default function About() {
                             </div>
                         
                             <div className="row">
-                                <div class="input-field col s12">
+                                <div className="input-field col s12">
                                     <input id="email" type="email" name="email" className="validate black-text" required />
                                 <label for="email">Email</label>
                                 </div>
@@ -154,7 +154,7 @@ export default function About() {
                                 </div>
                             </div>
                             <button className="btn green accent-4 waves-effect waves-light" type="submit" name="action">Send
-                                <i class="material-icons right">send</i>
+                                <i className="material-icons right">send</i>
                             </button>
                         </form>
                     </div>

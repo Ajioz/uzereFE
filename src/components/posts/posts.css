@@ -2,13 +2,13 @@
   flex: 9;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 0 auto 150vh auto;
+  padding: 0;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 520px){
   .posts {
-  padding: 0;
-  margin: 0 auto;
+    padding: 0;
+    margin: 0 auto;
   }
 }
-

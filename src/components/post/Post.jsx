@@ -4,20 +4,22 @@ import API from '../../api'
 
 
 
-export default function Post({post}) {
+export default function Post({_id, photo, desc, title, categories, createdAt}) {
     const PF = `${API}/images/`;
+    // const PF = 'https://th.bing.com/th/id/R.b9d0042c17cfae5240eac6b369c32455?rik=NNBlxgNPX%2f5pIQ&pid=ImgRaw&r=0'
     return (
         <>
-            <Link to = {`/post/${post._id}`}  className="post link" key={post._id} >
-                {post.photo && (<img className="postImg" src={PF + post.photo} alt="" />)}
+            <Link to = {`/post/${_id}`}  className="post link" key={_id} >
+                {photo && (<img className="postImg" src={`${PF}${photo}`} alt="" />)}
+                {/* {photo && (<img className="postImg" src={PF} alt="" />)} */}
                 <div className="postInfo">
                     <div className="postCats">
-                        {post.categories.map((cat) => ( <span className="postCat" key={cat._id}>{cat.name}</span> ))}    
+                        {categories.map((cat) => ( <span className="postCat" key={cat._id}>{cat.name}</span> ))}    
                     </div>
-                        <span className="postTitle">{post.title}</span><hr/>
-                    <span className="postDate">{ new Date(post.createdAt).toDateString() }</span>
+                        <span className="postTitle">{title}</span><hr/>
+                    <span className="postDate">{ new Date(createdAt).toDateString() }</span>
                 </div>
-                <p className="postDesc">{post.desc}</p>
+                <p className="postDesc">{desc}</p>
             </Link>
         </>
     )

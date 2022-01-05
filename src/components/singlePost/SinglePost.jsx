@@ -2,6 +2,12 @@ import { useParams } from 'react-router';
 import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import './singlePost.css';
+
+import 'jquery'
+import 'materialize-css';
+import { TextInput, Textarea } from 'react-materialize'
+
+
 import { Link } from "react-router-dom";
 import { Context } from '../../context/Context';
 import API from '../../api'
@@ -18,6 +24,7 @@ export default function SinglePost() {
     const [name, setName] = useState(" ");
     const [desc, setDesc] = useState(" ");
     const [updateMode, setUpdateMode] = useState(false);
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         const getPost = async() => {
@@ -32,11 +39,14 @@ export default function SinglePost() {
 
 
     useEffect(() => {
-        const getCat = async() => {
-            await axios.get(`${API}/api/categories/`);
-        };
-        getCat();
-    },[]);
+        const timeOut = setTimeout(()=>{
+            setError(false)
+        }, 5000)
+        return () => {
+            clearTimeout(timeOut)
+        }
+    },[error]);
+
 
     const handleDelete = async() => {
         try {
@@ -50,37 +60,40 @@ export default function SinglePost() {
     const  handleUpdate = async () => {
        const update = { username: user.username, title, desc, name };
        try {
-            await axios.put(`${API}/api/posts/${postId}`, update);
-            setUpdateMode(false)
-            window.location.replace('/');
+            const story_update = await axios.put(`${API}/api/posts/${postId}`, update);
+            setUpdateMode(false);
+            setError(false)
+            console.log('report', story_update);
+            if(story_update.status === 201){
+                window.location.replace('/');
+                console.log(story_update.status);
+            };
        }catch (error) {
             console.log('something went wrong', error);
+            setError(true)
        }  
     }
 
     return (
-        <div className="singlePost">
-            <div className="singlePostWrapper">
-                
-                { post.photo && ( <img src={PF + post.photo} alt="" className="singlePostImg" /> )}
+        <div className="container">
+            <div className="space"></div>
+            <div  className="container">
+                { post.photo && ( <img src={PF + post.photo} alt={post.title} className="singlePostImg" /> )}
                 
                 { updateMode ? (
                     <>
-                        <input 
+                        <TextInput 
+                            className="validate blue-grey-text" 
+                            autoFocus={ true } 
                             type="text" 
-                            value={title} 
-                            className="singlePostTitleInput validate" autoFocus={ true }
-                            onChange={(e)=> setTitle(e.target.value)}
-                            required                             
-                        /> 
+                            value={title}  
+                            onChange={(e)=> setTitle(e.target.value)}  />
 
-                        <input 
+                        <TextInput 
+                            className="validate blue-grey-text" 
                             type="text" 
-                            value={name} 
-                            className="singlePostTitleInput validate" autoFocus={ true }
-                            onChange={(e)=> setName(e.target.value)}
-                            required
-                        /> 
+                            value={name}  
+                            onChange={(e)=> setName(e.target.value)}  />
                     </>
                 ) : (
                      <h1 className="singlePostTitle">
@@ -103,16 +116,22 @@ export default function SinglePost() {
                 </div>
                 {
                     updateMode ? (
-                    <textarea 
-                        className="singlePostDescInput" 
-                        value={desc} 
-                        onChange={(e) => setDesc(e.target.value)}
-                    />
+                    <>
+                        <div className="text-space"></div>
+                        <div className="input-field col s12">
+                            <Textarea  
+                                className="validate blue-grey-text" 
+                                value={desc}  
+                                onChange={(e) => setDesc(e.target.value)}/>
+                        </div>
+                    </>
                     ) : ( 
                         <p className="singlePostDesc">{desc}</p> 
                     )
-                } 
-                { updateMode && (<button className="singlePostButton" onClick={handleUpdate}>Update</button>) }        
+                }  
+                {error && <p style={{color: 'red', fontSize:'12px'}}>Ooops!, Seems you didn't update category. Protip: Delete the old one and enter new CATEGORY...</p>}  
+                { updateMode && (<button className="singlePostButton" onClick={handleUpdate}>Update</button>) }   
+                  
             </div>
         </div>
     )

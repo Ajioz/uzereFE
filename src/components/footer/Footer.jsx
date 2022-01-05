@@ -5,7 +5,6 @@ import 'materialize-css'
 export default function Footer() {
     return (
         <>
-        <body>
             <footer id="service" className="page-footer  green accent-3" style={{marginTop: '120px'}}>
                 <div className="container">
                     <div className="row">
@@ -31,13 +30,12 @@ export default function Footer() {
                     </div>
                     </div>
                 </div>
-                <div class="footer-copyright  green accent-4 center">
-                    <div class="container">
-                        Uzere Food & Industries Limited, Copyright &copy; 1995 - 2021
+                <div className="footer-copyright  green accent-4 center">
+                    <div className="container">
+                        Uzere Food & Industries Limited, Copyright &copy; 1995 - 2022
                     </div>
                 </div>
             </footer> 
-        </body>
         </>
     )
 }
