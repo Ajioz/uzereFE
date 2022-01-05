@@ -53,9 +53,10 @@
   .headerTitles {
     flex-direction: column;
     height: 10vh;
+    width: 100%;
   }
 
-  .headerTitles {
+  .headerTitleSm {
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -65,5 +66,23 @@
     margin: 0 auto;
     padding-top: 20px;
     margin-left: -200px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .headerTitles {
+    display: block;
+    flex-direction: column;
+  }
+
+  span.headerTitleSm {
+    display: block;
+    margin: 0 auto;
+    padding: 20px auto;
+  }
+  span.logoLeft {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
   }
 }

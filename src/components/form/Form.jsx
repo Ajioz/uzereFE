@@ -11,6 +11,7 @@ import './form.css'
 import { TextInput, Textarea } from 'react-materialize'
 
 export default function Form() {
+
     const [title, setTitle] = useState(" ");
     const [desc, setDesc] = useState(" ");
     const [file, setFile] = useState(null);
@@ -67,6 +68,7 @@ export default function Form() {
 
     return (
         <div className='container'>
+            
          { file && (<img  className="writeImg" src={URL.createObjectURL(file)} alt="just_uploaded" />) }
 
             <form encType="multipart/form-data" onSubmit={handleSubmit} className="col s12"> 

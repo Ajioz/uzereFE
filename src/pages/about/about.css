@@ -162,7 +162,7 @@ form textarea {
 }
 
 .aboutIcon {
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   font-size: 4.5rem;
   color: rgb(12, 194, 21);
 }
@@ -178,4 +178,98 @@ form textarea {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
   padding: 0 2rem;
   height: 330px;
+}
+
+@media only screen and (max-width: 520px) {
+  #connect {
+    font-size: 24px;
+  }
+  .header {
+    margin-top: 50px;
+  }
+
+  .logoLeft {
+    padding-left: 0;
+  }
+
+  .headerTitleSm {
+    top: 5%;
+  }
+
+  .headerTitleLg {
+    top: 5%;
+  }
+
+  .headerRight {
+    top: 5%;
+  }
+
+  .headerRightCont {
+    top: 5%;
+    padding: 0;
+  }
+
+  .headerLeft {
+    margin-top: 0.3%;
+  }
+
+  .grayStrip {
+    margin-bottom: 50px;
+  }
+
+  .aboutLeft {
+    top: 5%;
+    padding: 0;
+  }
+
+  .aboutRight {
+    top: 5%;
+  }
+
+  .imgR {
+    margin-left: 0;
+  }
+
+  .bizIcon {
+    margin-left: 0;
+  }
+
+  .bizIconLeft {
+    margin-left: 0;
+  }
+
+  h4 {
+    padding: 0;
+  }
+
+  .gridCont {
+    padding: 0 30px;
+  }
+
+  .gridImg {
+    margin-top: 5%;
+  }
+
+  .secondHead {
+    min-height: 0;
+    margin: 0;
+  }
+
+  .secondHead p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .secondHead h1 {
+    margin-right: 0;
+  }
+
+  #newsletter form {
+    margin-top: 0;
+  }
+
+  .centerz:hover {
+    padding: 0 2rem;
+    height: 0;
+  }
 }

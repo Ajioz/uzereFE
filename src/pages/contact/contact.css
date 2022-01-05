@@ -148,14 +148,14 @@ body {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   .socialIcon {
     display: none;
   }
 
   .contact-box {
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     box-sizing: border-box;
   }
 
@@ -165,10 +165,15 @@ body {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    margin-top: -80%;
   }
 
   .c-heading h1 {
     font-size: 2.2rem;
     text-align: center;
+  }
+
+  .cleanup {
+    height: 0;
   }
 }

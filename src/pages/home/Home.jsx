@@ -6,9 +6,6 @@ import Posts from '../../components/posts/Posts'
 import Sidebar from '../../components/sidebar/Sidebar'
 import axios from "axios";
 import API from '../../api'
-
-
-
 import './home.css'
 import logo from '../../components/assets/logo.png'
 import Stat from '../../components/statistics/Stat';
@@ -22,6 +19,7 @@ export default function Home() {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await axios.get(`${API}/api/posts${search}`)
+            
             //debug MongoDB image fetch
             response.data.posts.map((item)=>{
                 return  console.log(item.photo)

@@ -124,12 +124,20 @@
 /* Viewport less then or equal to 750px */
 
 @media only screen and (max-width: 750px) {
-  .nav {
+  /* .nav {
     padding-top: 10px;
     height: 0;
     width: 100%;
     position: sticky;
     z-index: 9999;
+  } */
+
+  .nav {
+    height: 0;
+    margin: 0 auto;
+    position: sticky;
+    width: 100%;
+    /* margin-bottom: 30vh; */
   }
 
   .nav .nav-menu,
@@ -167,35 +175,10 @@
 
 @media only screen and (max-width: 520px) {
   .nav {
-    height: 0;
-    margin: 0 auto;
-    position: sticky;
-    width: 80%;
-  }
-
-  nav .toggle-collapse,
-  .current {
-    width: 70% !important;
-    background: transparent;
-    color: #104f55;
-    font-weight: bolder;
-    padding: 0;
-    margin: 0 auto;
-    height: 0;
-  }
-
-  .collapse {
-    height: 33rem;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .nav {
-    height: 0;
+    height: 12vh;
     margin: 0 auto;
     position: sticky;
     width: 100%;
-    /* margin-bottom: 30vh; */
   }
 
   nav .toggle-collapse,
@@ -206,6 +189,7 @@
     font-weight: bolder;
     padding: 0;
     margin: 0 auto;
+    height: 0;
   }
 
   .collapse {

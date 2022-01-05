@@ -1,9 +1,7 @@
 import './about.css'
 import 'jquery'
 import 'materialize-css'
-
-import green from '../../components/assets/good.jpg'
-import logo from '../../components/assets/logo.png'
+import Header from '../../components/header/Header'
 import car from '../../components/assets/nse_ugh2.jpg'
 import secongImg from '../../components/assets/nse_ugh2.jpg'
 
@@ -12,27 +10,7 @@ export default function About() {
 
     return (
         <>
-            <div className="row header">
-                <div className="headerTitles">
-                    <span className="headerTitleSm">Uzere Food & Industries</span>
-                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}} alt='comLogo'/></span>
-                </div>
-                <div className="head blue-grey lighten-5">
-                    <div className="col s12 m7 l7 headerLeft">
-                        <img src={green} className="headerMainLeft responsive-img bizIcon" alt="content" />
-                        <span className="flow-text"></span>
-                    </div>
-                    <div className="col s12 m5 l5 blue-grey lighten-5 headerLeft">
-                        <h1 className="headerRight center">Nigeria's Pride</h1>
-                        <p className="headerRightCont center"> 
-                            We are proudly Nigeria's foremost cassava processing company
-                            UFIL has been leading the  initiative of Commercial Cassava Cultivation in Delta State and Environs. Partnering over Two Hundred Farmers in the Cultivation of Cassava.
-                        </p>
-                        <span className="flow-text"></span>
-                    </div>
-                </div>
-            </div>
-            <div className="blueStrip"></div><div className="grayStrip"></div>
+            <Header />
             <div className="row">
                 <div className="col s12 m4 l4 center centerz">
                     <h3 className="aboutLeft">MOTIVATION</h3>

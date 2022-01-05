@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 export default function Header() {
     useEffect(() => {
         Aos.init();
-    }, [])
+    },[])
     return (
         <>
             <div className="row header" data-aos="fade-left" data-aos-offset="100">
