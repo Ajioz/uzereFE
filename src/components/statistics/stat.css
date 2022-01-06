@@ -51,7 +51,7 @@ button.btnz {
   padding: 0.5rem 2rem;
   color: white;
   justify-content: space-around;
-  flex: 1 0 100%;
+  flex: 1 0 70%;  
 }
 
 .before-footer .sypnosis .sypnosis-content div {
@@ -120,7 +120,7 @@ button.btnz {
   color: white;
   justify-content: space-evenly;
   width: 100%;
-  flex: 1 0 100%;
+  flex: 1 0 75%;
   align-items: center;
 }
 
