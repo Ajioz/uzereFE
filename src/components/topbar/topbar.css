@@ -168,7 +168,7 @@
 
 @media only screen and (max-width: 520px) {
   .nav {
-    height: 10vh;
+    height: 8vh;
     margin: 0 auto;
     position: sticky;
     width: 100%;
