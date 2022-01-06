@@ -38,9 +38,12 @@
   margin-bottom: 80px;
 }
 
-@media only screen and (max-width: 520px){
+@media only screen and (max-width: 520px) {
   .head {
-  padding: 5vh 0;
-}
+    padding: 5vh 0;
+  }
 
+  .headerRightCont {
+    padding: 0;
+  }
 }

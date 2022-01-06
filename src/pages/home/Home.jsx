@@ -30,11 +30,14 @@ export default function Home() {
     }, [search])
     return (
         <>
-            <div className="row header">
-                <div className="headerTitles">  
-                    <span className="logoLeft"><img src={logo} style={{width: '80px', height: '50px'}}alt='comLogo' /></span>
-                    <span className="headerTitleSm">Uzere Food & Industries</span>
+            <div className="header">
+                <div className="logoLeft">
+                    <img 
+                        src={logo} 
+                        style={{width: '80px', height: '50px', marginTop: '60px' }} 
+                        alt='comLogo' />
                 </div>
+                <div className="headerTitleSm"><h3>Uzere Food & Industries</h3></div>
             </div>
             < Slider />
             < Header />
@@ -42,7 +45,7 @@ export default function Home() {
                 <Posts posts={posts} key={posts.Id}/>
                 <Sidebar />
             </div>
-            <section><Stat /></section>
+            <section><Stat /></section> 
         </>
     )
 }

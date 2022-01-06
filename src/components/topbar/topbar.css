@@ -124,13 +124,6 @@
 /* Viewport less then or equal to 750px */
 
 @media only screen and (max-width: 750px) {
-  /* .nav {
-    padding-top: 10px;
-    height: 0;
-    width: 100%;
-    position: sticky;
-    z-index: 9999;
-  } */
 
   .nav {
     height: 0;
@@ -175,7 +168,7 @@
 
 @media only screen and (max-width: 520px) {
   .nav {
-    height: 12vh;
+    height: 10vh;
     margin: 0 auto;
     position: sticky;
     width: 100%;

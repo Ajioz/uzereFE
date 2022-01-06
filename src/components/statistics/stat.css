@@ -177,15 +177,41 @@ button.btnz {
     font-size: 1.5rem;
   }
 
+
   .before-footer .sypnosis .sypnosis-content div,
   .before-footer .statistics .statistics-content div {
     flex: 100%;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+    margin-left: 0;
+  }
+
+  .before-footer .sypnosis .sypnosis-content {
+    /* padding: 0.5rem 2rem; */
+    padding: 0;
+  }
+  
+  .before-footer .statistics .statistics-content {
+    padding: 0;
   }
 
   .before-footer .contact-us {
-    flex: 100%;
-    padding: 0 3rem;
+    /* padding: 0 3rem; */
+    padding: 0;
+  }
+
+  .before-footer .statistics .statistics-content .stat-icon i {
+    /* padding: 1rem 2rem; */
+    padding: 0;
+  }
+
+
+  .before-footer .sypnosis {
+    margin: 0;
+  }
+
+
+  .before-footer .sypnosis .sypnosis-content {
+    padding: 0;
   }
 }
 
