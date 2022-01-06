@@ -169,13 +169,13 @@
 @media only screen and (max-width: 520px) {
   .nav {
     height: 8vh;
-    padding: 0 0 0 5px;
+    padding: 0;
     margin: 0 auto;
     position: sticky;
     width: 100%;
   }
 
-  nav .toggle-collapse,
+  .nav .toggle-collapse,
   .current {
     width: 70% !important;
     background: transparent;
@@ -186,7 +186,12 @@
     height: 0;
   }
 
+  .nav.nav-menu{
+    padding: 0 0 0 5px;
+  }
+
   .collapse {
     height: 33rem;
   }
+  
 }
