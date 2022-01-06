@@ -27,7 +27,6 @@ button.btnz {
   justify-content: center;
   min-height: 50vh;
   width: 100%;
-  margin-top: -600px;
 }
 
 .before-footer .sypnosis {
@@ -185,12 +184,12 @@ button.btnz {
 
   .before-footer .sypnosis .sypnosis-content {
     padding: 0.5rem 2rem;
-    margin: 10px auto;
+    margin: 0 auto;
   }
 
   .before-footer .statistics .statistics-content {
     padding: 0.5rem 2rem;
-    margin: 10px auto;
+    margin: 0 auto;
   }
 
   .before-footer .contact-us {
@@ -217,6 +216,6 @@ button.btnz {
   .before-footer .sypnosis .sypnosis-heading h2,
   .before-footer .statistics .statistics-heading h2 {
     font-size: 1.5rem;
-    margin: 0 auto;
+    margin: 10px auto;
   }
 }
