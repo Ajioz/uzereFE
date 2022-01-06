@@ -169,7 +169,7 @@
 @media only screen and (max-width: 520px) {
   .nav {
     height: 8vh;
-    padding: 0;
+    padding: 0 0 0 5px;
     margin: 0 auto;
     position: sticky;
     width: 100%;
@@ -189,5 +189,4 @@
   .collapse {
     height: 33rem;
   }
-  
 }
