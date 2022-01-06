@@ -82,7 +82,7 @@
 
 .topIcon {
   font-size: 20px;
-  margin-right: 10px;
+  margin: 0 auto;
   color: #444;
   cursor: pointer;
 }
@@ -108,7 +108,6 @@
 }
 
 .topListItem {
-  margin-right: 20px;
   font-size: 18px;
   font-weight: 300;
   cursor: pointer;
@@ -118,7 +117,6 @@
   font-size: 18px;
   color: #666;
   cursor: pointer;
-  margin-left: 15px;
 }
 
 /* Viewport less then or equal to 750px */
@@ -129,8 +127,6 @@
     margin: 0 auto;
     position: sticky;
     width: 100%;
-    padding: 0;
-    /* margin-bottom: 30vh; */
   }
 
   .nav .nav-menu,
@@ -142,6 +138,7 @@
   .nav .toggle-collapse {
     display: initial;
   }
+
   .nav .nav-items .current {
     background: transparent;
     color: #104f55;
@@ -181,17 +178,34 @@
     background: transparent;
     color: #104f55;
     font-weight: bolder;
-    padding: 0;
+    padding: 0 auto;
     margin: 0 auto;
     height: 0;
   }
 
-  .nav.nav-menu{
-    padding: 0 0 0 5px;
+  .topLeft .social {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .nav .toggle-collapse {
+    margin: 0 auto;
+  }
+
+  .nav .toggle-collapse .toggle-Icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 80px;
+    padding: 1.7rem auto;
+    width: 100%;
+  }
+
+  .nav .toggle-collapse .toggle-Icons i {
+    font-size: 1.4rem;
+    color: #3f4954;
   }
 
   .collapse {
     height: 33rem;
   }
-  
 }

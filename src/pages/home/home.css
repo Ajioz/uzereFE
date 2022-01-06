@@ -26,7 +26,7 @@
   }
 
   .logoLeft {
-    /* margin: -50px auto -50px -150px; */
+    margin: -50px auto -50px -150px;
   }
 
   .headerTitleSm h3 {
@@ -63,7 +63,7 @@
 
   .headerTitleSm h3 {
     margin: 60px auto;
-    /* margin-left: 50px; */
+    margin-left: 50px;
   }
   .logoLeft {
     margin: -50px auto;
