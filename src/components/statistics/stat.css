@@ -27,7 +27,7 @@ button.btnz {
   justify-content: center;
   min-height: 50vh;
   width: 100%;
-  /* margin-bottom: 20px; */
+  margin-top: -600px;
 }
 
 .before-footer .sypnosis {

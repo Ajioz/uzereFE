@@ -103,26 +103,25 @@ export default function Sidebar() {
                         </div>
                     </div>
                     <div className="post-title">
-                     <h6>New data recording to better serve the ecosytem</h6>
+                    <h6>New data recording to better serve the ecosytem</h6>
                     </div>
                 </div>
                 <div className="post-content" data-aos="flip-right" data-aos-delay="300">
-                <div className="post-image">
-                    <div>
-                    <img className="img" src={farm} alt="Blog1" /></div>
-                    <div className="post-info flex-row">
-                        <span>&nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray"></i
-                            >&nbsp;&nbsp; January 14, 2019 &nbsp;&nbsp;
-                        </span>
-                        <span>2 Comments</span>
+                    <div className="post-image">
+                        <div>
+                        <img className="img" src={farm} alt="Blog1" /></div>
+                        <div className="post-info flex-row">
+                            <span>&nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray"></i
+                                >&nbsp;&nbsp; January 14, 2019 &nbsp;&nbsp;
+                            </span>
+                            <span>2 Comments</span>
+                        </div>
                     </div>
-                </div>
-                <div className="post-title">
-                    <h6>New data recording to better serve the ecosytem</h6>
+                    <div className="post-title">
+                        <h6>New data recording to better serve the ecosytem</h6>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
     )
 }

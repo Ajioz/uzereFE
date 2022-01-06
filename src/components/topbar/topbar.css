@@ -124,12 +124,12 @@
 /* Viewport less then or equal to 750px */
 
 @media only screen and (max-width: 750px) {
-
   .nav {
     height: 0;
     margin: 0 auto;
     position: sticky;
     width: 100%;
+    padding: 0;
     /* margin-bottom: 30vh; */
   }
 
@@ -169,6 +169,7 @@
 @media only screen and (max-width: 520px) {
   .nav {
     height: 8vh;
+    padding: 0;
     margin: 0 auto;
     position: sticky;
     width: 100%;
@@ -188,4 +189,5 @@
   .collapse {
     height: 33rem;
   }
+  
 }
