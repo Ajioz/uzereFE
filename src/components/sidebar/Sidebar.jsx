@@ -1,12 +1,16 @@
 import './sidebar.css'
-import farm from '../assets/cassava.jpg'
-import processed from '../assets/Cassava_process.jpg'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import API from '../../api'
+
+//Images
+import farmer from '../assets/sidebar/farmer.jpg'
+import flyer from '../assets/sidebar/flyer.jpg'
+import yard from '../assets/sidebar/yard.jpg'
+import Bag from '../assets/sidebar/Bags3.jpg'
 
 export default function Sidebar() {
     let myLink = '/categories'
@@ -29,15 +33,25 @@ export default function Sidebar() {
 
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT US</span>
-                <img src={farm} alt="farm" data-aos="zoom-in-up" data-aos-delay="200" />
-                <p>
-                    We are a Leading Cassava Processing company since 2008. Uzere Foods and Industries Ltd ( UFIL) is an agro-allied company, Formerly known as Uzere Cassava Processing Factory Ltd  which operates under the Public Private Partnership (PPP) under the Leadership of her Managing Director, Samuel Askia Jr.
-                </p>
-                <img src={processed} alt="farm"  data-aos="zoom-in-down" data-aos-delay="200" /> 
-                <p> 
-                    UFIL has been leading the  initiative of Commercial Cassava Cultivation in Delta State and Environs. 
-                    Partnering over Two Hundred Farmers in the Cultivation of Cassava. Our Production Capacity is estimated at 25MT per day for Starch and 25MT for Flour.
-                </p>
+                <img src={farmer} alt="farm" data-aos="zoom-in-up" data-aos-delay="200" />
+                <div className="sideborder" data-aos="fade-down" data-aos-delay="200">
+                    <p data-aos="fade-down" data-aos-delay="400">
+                          We are a Leading Cassava Processing company since 2008. Uzere Foods and Industries Ltd ( UFIL) is an agro-allied company, Formerly known as Uzere Cassava Processing Factory Ltd  which operates under the Public Private Partnership (PPP) under the Leadership of her Managing Director, Samuel Askia Jr.
+                    </p>
+                </div>
+                
+                <img src={flyer} alt="farm"  data-aos="zoom-in-down" data-aos-delay="200" /> 
+                <div className="sideborder" data-aos="fade-down" data-aos-delay="200">
+                    <p data-aos="fade-down" data-aos-delay="400">
+                        Uzere cassava processing factory, is a cassava processing
+                        company in Nigeria that is looking to meet the growing demand for
+                        cassava starch. It is mainly used as food, but is also readily converted chemically,
+                        physically, and biologically into many useful products today starch
+                        is used to produce such diverse products as food, paper, textiles,
+                        adhesives, beverages, confectionery, pharmaceuticals, and
+                        building materials.
+                    </p>
+                </div>
             </div>
 
             <div className="sidebarItem">
@@ -54,10 +68,21 @@ export default function Sidebar() {
             <div className="sidebarItem">
                 <span className="sidebarTitle">FOLLOW US</span>
                 <div className="sidebarSocial">
-                    <i className="sidebarIcon fab fa-facebook-square"></i>
-                    <i className="sidebarIcon fab fa-twitter-square"></i>
-                    <i className="sidebarIcon fab fa-pinterest-square"></i>
-                    <i className="sidebarIcon fab fa-instagram-square"></i>
+                     <a href="https://web.facebook.com/uzerecassavapf/" target="_blank">
+                            <i className="topIcon fab fa-facebook-square"></i>
+                        </a>
+
+                        <a href="https://www.twitter.com/uzerecassava/" target="_blank">
+                            <i className="topIcon fab fa-twitter-square"></i>
+                        </a>
+
+                        <a href="whatsapp://send?text=Hi, I'd love to know more about Uzere Farm, I am reaching you from your official webpage!&phone=+2348166227438" target="_blank">
+                            <i className="topIcon fa fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/uzerecassava/" target="_blank">
+                            <i className="topIcon fab fa-instagram-square"></i>
+                        </a>
                 </div>
             </div>
 
@@ -66,23 +91,23 @@ export default function Sidebar() {
                 <div className="category">
                     <ul className="category-list">
                         <li className="list-items" data-aos="fade-left" data-aos-delay="100">
-                        <a href={myLink}>Software</a>
+                        <a href={myLink}>Agro-allied </a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="200">
-                        <a href={myLink}>Technology</a>
+                        <a href={myLink}>Poultry Products</a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="300">
-                        <a href={myLink}>LifeStyle</a>
+                        <a href={myLink}>Fish Feeds  </a>
                         
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="400">
-                        <a href={myLink}>Shopping</a>
+                        <a href={myLink}>Broilers</a>
                        
                         </li>
                         <li className="list-items" data-aos="fade-left" data-aos-delay="500">
-                        <a href={myLink}>Food</a>
+                        <a href={myLink}>Cassava  Processing</a>
                         
                         </li>
                     </ul>
@@ -93,32 +118,33 @@ export default function Sidebar() {
                 <h4 className="foodTitle">Popular Post</h4>     
                 <div className="post-content" data-aos="flip-up" data-aos-delay="100">
                     <div className="post-image">
-                        <div><img className="img" src={farm} alt="Blog1" /></div>
+                        <div><img className="img" src={yard} alt="Blog1" /></div>
                         <div className="post-info flex-row">
                             <span
                             >&nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray"></i
-                            >&nbsp;&nbsp; January 14, 2019 &nbsp;&nbsp;</span
-                            >
-                            <span>2 Comments</span>
+                            >&nbsp;&nbsp; Uzere Food Industries, 2022 &nbsp;&nbsp;</span>
+                            <span> - Book a Date with Us</span>
                         </div>
                     </div>
                     <div className="post-title">
-                    <h6>New data recording to better serve the ecosytem</h6>
+                    <h6>NIGERIA'S Foremost Cassava Processing Company</h6>
                     </div>
                 </div>
                 <div className="post-content" data-aos="flip-right" data-aos-delay="300">
                     <div className="post-image">
                         <div>
-                        <img className="img" src={farm} alt="Blog1" /></div>
+                        <img className="img" src={Bag} alt="Blog1" /></div>
                         <div className="post-info flex-row">
-                            <span>&nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray"></i
-                                >&nbsp;&nbsp; January 14, 2019 &nbsp;&nbsp;
-                            </span>
-                            <span>2 Comments</span>
+                            <span
+                            >&nbsp;&nbsp;<i className="fas fa-calendar-alt text-gray"></i
+                            >&nbsp;&nbsp; Uzere Food Industries, 2022 &nbsp;&nbsp;</span>
+                            <span> - Book a Date with Us</span>
                         </div>
                     </div>
                     <div className="post-title">
-                        <h6>New data recording to better serve the ecosytem</h6>
+                        <h6>Outgrower Partnership Programs as well as commercial sensitisation is currently ongoing.
+
+</h6>
                     </div>
                 </div>
             </div>

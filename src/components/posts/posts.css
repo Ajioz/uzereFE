@@ -2,7 +2,9 @@
   flex: 9;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto 150vh auto;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -10,7 +12,9 @@
   .posts {
     flex: 12;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }

@@ -7,7 +7,7 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import axios from "axios";
 import API from '../../api'
 import './home.css'
-import logo from '../../components/assets/logo.png'
+import logo from '../../components/assets/trans_logo.png'
 import Stat from '../../components/statistics/Stat';
 
 
@@ -34,7 +34,13 @@ export default function Home() {
                 <div className="logoLeft">
                     <img 
                         src={logo} 
-                        style={{width: '80px', height: '50px', marginTop: '60px' }} 
+                        style={{width: '200px', height: '80px', marginTop: '30px' }} 
+                        alt='comLogo' />
+                </div>
+                <div className="logosmall">
+                    <img 
+                        src={logo} 
+                        style={{width: '100px', height: '40px', marginTop: '0px' }} 
                         alt='comLogo' />
                 </div>
                 <div className="headerTitleSm"><h3>Uzere Food & Industries</h3></div>

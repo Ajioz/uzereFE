@@ -4,10 +4,10 @@ import { Slider, Slide, Caption } from 'react-materialize'
 
 
 //Import images
-import cover from '../assets/plant.jpg'
+import cover from '../assets/yard.jpg'
 import process_cassava from '../assets/Cassava_process.jpg'
-import plant from '../assets/farm.jpg'
-import farmers from '../assets/farmers.jpg'
+import plant from '../assets/nse_ugh2.jpg'
+import farmers from '../assets/farmer.jpg'
 
 
 export default function Slides(){
@@ -32,7 +32,7 @@ export default function Slides(){
          <Slide image={<img alt="" src={plant}/>}>
           <Caption placement="right">
             <h3>With State of Art Equipment</h3>
-            <h5 className="light grey-text text-lighten-3">Using the most Advance technologyin food cassava processing</h5>
+            <h5 className="light grey-text text-lighten-3">Using the most Advance technology in cassava processing</h5>
           </Caption>
         </Slide>
 

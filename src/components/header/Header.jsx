@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import "./header.css"
-import green from '../../components/assets/good.jpg'
+import green from '../../components/assets/farmers.jpg'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -18,7 +18,7 @@ export default function Header() {
                     </div>
                     <div className="col s12 m12 l5 blue-grey lighten-5 headerLeft">
                         <h1 className="headerRight center">Nigeria's Pride</h1>
-                        <p className="headerRightCont center" data-aos="fade-up-right" data-aos-offset="100"> 
+                        <p className="headerRightCont center blue-text text-darken-4" data-aos="fade-up-right" data-aos-offset="100"> 
                             We are proudly Nigeria's foremost cassava processing company
                             UFIL has been leading the  initiative of Commercial Cassava Cultivation in Delta State and Environs. Partnering over Two Hundred Farmers in the Cultivation of Cassava.
                         </p>

@@ -26,7 +26,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.1559781930905!2d5.767362914447658!3d5.543876835313656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ad782b8d9877%3A0x83fa1d7e0ba43554!2s33%20Airport%20Road%2C%20Warri%20330102%2C%20Warri!5e0!3m2!1sen!2sng!4v1638357357662!5m2!1sen!2sng" style={{border:"0",  width:'600px', height:"450px"}} allowFullScreen="" loading="lazy" title='direction'></iframe>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8068651.87641677!2d8.674253!3d9.084576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041ed28673da1bd%3A0xe21d70bea07b7e5f!2sUZERE%20CASSAVA%20PROCESSING%20FACTORY!5e0!3m2!1sen!2sng!4v1643494054617!5m2!1sen!2sng" style={{border:"0",  width:'600px', height:"450px"}} allowFullScreen="" loading="lazy" title='direction'></iframe>
                 </div>
             </section>
         </>

@@ -1,15 +1,21 @@
 .nav {
   top: 0;
+  border-bottom: 2px rgb(27, 233, 27) solid;
   background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 0 2rem;
   height: 0;
-  min-height: 10vh;
+  height: 10vh;
   overflow: hidden;
   transition: height 1s ease-in-out;
   position: fixed;
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
   z-index: 9999;
+}
+
+.logoLeft{
+  /* display: none; */
 }
 
 .flex-row {
@@ -66,18 +72,26 @@
 
 .nav .social i {
   padding: 0.2rem;
+  margin: 0 10px;
 }
 
 .nav .social i:hover {
   color: #1caf3c;
 }
 
-.topLeft,
+.topLeft {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .topRight {
   flex: 3;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 15px;
 }
 
 .topIcon {
@@ -123,7 +137,7 @@
 
 @media only screen and (max-width: 750px) {
   .nav {
-    height: 0;
+    height: 8vh;
     margin: 0 auto;
     position: sticky;
     width: 100%;
@@ -165,7 +179,6 @@
 
 @media only screen and (max-width: 520px) {
   .nav {
-    height: 8vh;
     padding: 0 0 0 5px;
     margin: 0 auto;
     position: sticky;
@@ -188,6 +201,11 @@
     margin: 0 auto;
   }
 
+  .topRight {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .nav .toggle-collapse {
     margin: 0 auto;
   }
@@ -196,7 +214,7 @@
     display: flex;
     justify-content: flex-end;
     margin-left: 90px;
-    padding: 1.7rem auto;
+    padding: 1rem auto;
     width: 100%;
   }
 
@@ -206,6 +224,7 @@
   }
 
   .collapse {
-    height: 33rem;
+    height: 30rem;
+    margin: 0 auto;
   }
 }

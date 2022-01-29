@@ -1,5 +1,7 @@
 .home {
   display: flex;
+  margin: 0 auto;
+  margin-bottom: -5rem;
 }
 
 .header {
@@ -11,6 +13,10 @@
   min-height: 15vh;
 }
 
+ .logosmall {
+    display: none;
+  }
+  
 .headerTitleSm {
   top: 0%;
   margin: 0 auto;
@@ -18,19 +24,18 @@
 
 @media only screen and (max-width: 750px) {
   .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     min-height: 8vh;
   }
 
-  .headerTitles {
-    margin: 50px auto;
-  }
-
-  .logoLeft {
-    margin: -50px auto -50px -150px;
+  .logosmall {
+    display: none;
   }
 
   .headerTitleSm h3 {
-    margin-top: 8%;
     font-size: 20px;
   }
 }
@@ -48,7 +53,16 @@
     margin: 60px auto;
   }
   .logoLeft {
-    margin: -50px auto;
+    display: none;
+  }
+
+   .logosmall {
+     display: block;
+    margin-top: 20px;
+  }
+
+  .home {
+    margin-bottom: 0rem;
   }
 }
 
@@ -67,5 +81,9 @@
   }
   .logoLeft {
     margin: -50px auto;
+  }
+
+  .home {
+    margin-bottom: 0rem;
   }
 }

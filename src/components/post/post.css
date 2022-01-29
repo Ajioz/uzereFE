@@ -1,10 +1,6 @@
 .post {
-  width: 385px;
+  width: 350px;
   height: 480px;
-  margin-top: 10px;
-  margin-right: 25px;
-  margin-bottom: 40px;
-  margin-left: 25px;
   padding-bottom: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -92,6 +88,7 @@
 
 @media only screen and (max-width: 520px) {
   .post {
-    margin: 40px auto;
+    width: 90%;
+    margin: 0 auto;
   }
 }
