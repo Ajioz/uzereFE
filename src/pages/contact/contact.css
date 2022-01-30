@@ -156,11 +156,36 @@ body {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 380px) {
   .socialIcon {
     display: none;
   }
 
+  .contact-box {
+    width: 100%;
+    height: 80vh;
+    box-sizing: border-box;
+  }
+
+  #contact {
+    position: static;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 2vh 0;
+  }
+
+  .c-heading h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .cleanup {
+    height: 0;
+  }
+}
+@media (max-width: 520px) {
   .contact-box {
     width: 100%;
     height: 120vh;
