@@ -58,6 +58,23 @@ const Footer = () => {
         <div className="follow" data-aos="fade-left" data-aos-delay="200">
           <h2>Follow Us</h2>
           <p>Let us be Social</p>
+           <div>
+              <a href="https://web.facebook.com/uzerecassavapf/" target="_blank" rel="noreferrer" >
+                  <i className="topIcon fab fa-facebook-square"></i>
+              </a>
+
+              <a href="https://www.twitter.com/uzerecassava/" target="_blank" rel="noreferrer" >
+                  <i className="topIcon fab fa-twitter-square"></i>
+              </a>
+
+              <a href="whatsapp://send?text=Hi, I'd love to know more about Uzere Farm, I am reaching you from your official webpage!&phone=+2348166227438" target="_blank" rel="noreferrer" >
+                  <i className="topIcon fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+
+              <a href="https://www.instagram.com/uzerecassava/" target="_blank" rel="noreferrer" >
+                  <i className="topIcon fab fa-instagram-square"></i>
+              </a>
+            </div>
           
            <p>Call us on</p>
           <div>

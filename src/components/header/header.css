@@ -1,6 +1,7 @@
 .head {
   min-height: 50vh;
   width: 100%;
+  font-family: monospace;
 }
 
 .headerLeft {
@@ -12,7 +13,7 @@
   font-weight: 500;
   font-size: 50px;
   color: #00c853;
-  font-family: "Josefin Sans";
+  font-family: monospace;
 }
 
 .headerMainLeft {
