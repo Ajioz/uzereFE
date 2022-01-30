@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
-/* @import url('./font.css'); */
 
 html,
 body {
@@ -19,13 +18,6 @@ body {
 
   /* Gradient Color */
   --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-
-  /* Theme Font-family */
-  --Abel: "Abel", cursive;
-  --Anton: "Anton", cursive;
-  --Josefin: "Josefin", cursive;
-  --Lexend: "Lexend", cursive;
-  --Livvic: "Livvic", cursive;
 }
 
 a {
