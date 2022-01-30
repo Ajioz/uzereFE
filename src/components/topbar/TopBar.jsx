@@ -24,19 +24,19 @@ export default function TopBar() {
             <div className={`nav ${ navToggle && position}`} >
                 <div className="top nav-menu flex-row">
                     <div className="topLeft social text-gray">
-                        <a href="https://web.facebook.com/uzerecassavapf/" target="_blank">
+                        <a href="https://web.facebook.com/uzerecassavapf/" target="_blank" rel="noreferrer" >
                             <i className="topIcon fab fa-facebook-square"></i>
                         </a>
 
-                        <a href="https://www.twitter.com/uzerecassava/" target="_blank">
+                        <a href="https://www.twitter.com/uzerecassava/" target="_blank" rel="noreferrer" >
                             <i className="topIcon fab fa-twitter-square"></i>
                         </a>
 
-                        <a href="whatsapp://send?text=Hi, I'd love to know more about Uzere Farm, I am reaching you from your official webpage!&phone=+2348166227438" target="_blank">
+                        <a href="whatsapp://send?text=Hi, I'd love to know more about Uzere Farm, I am reaching you from your official webpage!&phone=+2348166227438" target="_blank" rel="noreferrer" >
                             <i className="topIcon fa fa-whatsapp" aria-hidden="true"></i>
                         </a>
 
-                        <a href="https://www.instagram.com/uzerecassava/" target="_blank">
+                        <a href="https://www.instagram.com/uzerecassava/" target="_blank" rel="noreferrer" >
                             <i className="topIcon fab fa-instagram-square"></i>
                         </a>
                     </div>

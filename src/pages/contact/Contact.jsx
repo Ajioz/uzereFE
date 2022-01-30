@@ -7,11 +7,21 @@ export default function Contact() {
             <div className="cleanup"></div>
             <section id="contact">
                 <div className="socialIcon">
-                    <i className="Icon fab fa-facebook-f"></i>
-                    <i className="Icon fab fa-twitter"></i>
-                    <i className="Icon fab fa-instagram"></i>
-                    <i className="Icon fa fa-whatsapp"></i>
-                    <i className="Icon fab fa-linkedin"></i>
+                   <a href="https://web.facebook.com/uzerecassavapf/" target="_blank" rel="noreferrer" >
+                            <i className="topIcon fab fa-facebook-square"></i>
+                        </a>
+
+                        <a href="https://www.twitter.com/uzerecassava/" target="_blank" rel="noreferrer" >
+                            <i className="topIcon fab fa-twitter-square"></i>
+                        </a>
+
+                        <a href="whatsapp://send?text=Hi, I'd love to know more about Uzere Farm, I am reaching you from your official webpage!&phone=+2348166227438" target="_blank" rel="noreferrer" >
+                            <i className="topIcon fa fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/uzerecassava/" target="_blank" rel="noreferrer" >
+                            <i className="topIcon fab fa-instagram-square"></i>
+                        </a>
                 </div>
                 <div className="contact-box"> 
                     <div className="c-heading">
