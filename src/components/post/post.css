@@ -2,9 +2,9 @@
   width: 350px;
   height: 480px;
   padding-bottom: 5px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   margin-top: -160px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(240, 65, 65, 0.5);
   border-radius: 15px;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -92,5 +92,8 @@
   .post {
     width: 90%;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
   }
 }

@@ -2,7 +2,7 @@
 
 html,
 body {
-  margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -35,18 +35,19 @@ ul {
 }
 
 h1 {
-  font-family: 'Nunito' !important;
+  font-family: "Nunito" !important;
   font-size: 2.5rem;
 }
 
 h2 {
-  font-family: 'Nunito' !important;
-  padding: 0 1rem;
+  font-family: "Nunito" !important;
+  padding: 0.5rem 1rem;
+  margin: 2px auto;
   font-size: 1.5rem;
 }
 
 span {
-  font-family: 'Nunito';
+  font-family: "Nunito";
 }
 
 .containerz {
@@ -58,7 +59,7 @@ span {
 }
 
 p {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   color: white;
 }
 
@@ -99,7 +100,7 @@ footer.footer .newsletter .form-element input {
   border: none;
   background: transparent;
   color: var(--white);
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-size: 1rem;
   width: 74%;
 }
@@ -124,7 +125,7 @@ footer.footer .follow div i {
 
 footer.footer .moveRight {
   justify-content: center;
-  font-family:'Nunito';
+  font-family: "Nunito";
   background-color: white;
 }
 
