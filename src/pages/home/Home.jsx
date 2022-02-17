@@ -19,11 +19,6 @@ export default function Home() {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = await axios.get(`${API}/api/posts${search}`)
-            
-            //debug MongoDB image fetch
-            response.data.posts.map((item)=>{
-                return  console.log(item.photo)
-            })
             setPosts(response.data.posts)
         }
         fetchPosts();

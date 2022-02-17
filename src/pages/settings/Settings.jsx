@@ -15,7 +15,7 @@ export default function Settings() {
     const [success, setSuccess] = useState(false);
     const { user, dispatch } = useContext(Context);
 
-    const PF = `${API}/images/`
+    // const PF = `${API}/images/`
         
      const handleSubmit = async(e) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ export default function Settings() {
             updatedUser.profilePic = filename;
            
             try {
-                await axios.post(`${API}/api/upload`, data)
+                // await axios.post(`${API}/api/upload`, data)
             } catch (error) {  }
         }
         try {
@@ -53,7 +53,8 @@ export default function Settings() {
                 <form  className="settingsForm" encType="multipart/form-data" onSubmit={handleSubmit}>
                     <label> Profile Picture</label>
                     <div className="settingsPP">
-                        <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" />
+                        {/* <img src={file ? URL.createObjectURL(file) : PF + user.profilePic} alt="" /> */}
+                        <img src={file ? URL.createObjectURL(file) : user.profilePic} alt="" />
                         <label htmlFor="fileInput">
                             <i className="settingsPPIcon far fa-user-circle"></i>
                         </label>

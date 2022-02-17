@@ -2,12 +2,12 @@ import  './topbar.css'
 import { Link } from 'react-router-dom'
 import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
-import API from '../../api'
+// import API from '../../api'
 
 
 export default function TopBar() {
 
-    const PF = `${API}/images/`
+    // const PF = `${API}/`
 
     const { user, dispatch } = useContext(Context);
     const [navToggle, setNavToggle] = useState(false)
@@ -60,7 +60,7 @@ export default function TopBar() {
                     <div className="topRight" >
                         {
                             user ? (
-                            <Link to="/settings" className="link"><img className="topImg" src={PF + user.profilePic} alt="here" /> </Link>  
+                            <Link to="/settings" className="link"><img className="topImg" src={user.profilePic} alt="here" /> </Link>  
                             ) : (
                                 <ul className="topList" onClick={()=> setNavToggle(!navToggle)} >
                                     <li className="topListItem">
