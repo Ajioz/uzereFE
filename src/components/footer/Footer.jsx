@@ -85,7 +85,7 @@ const Footer = () => {
 
         <div className="moveRight flex-row">
           <h4 className="text-gray">
-            Copyright &copy; | 2021 All right reserved - Uzere Food Industries
+            Copyright &copy; | 2022 All right reserved - Uzere Food Industries
           </h4>
         </div>
 

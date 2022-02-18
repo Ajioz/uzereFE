@@ -1,45 +1,83 @@
 import Sidebar from '../../components/sidebar/Sidebar'
 import './settings.css'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Context } from '../../context/Context';
 import axios from 'axios'
 import API from '../../api'
-
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+import app from "../../firebase";
 
 export default function Settings() {   
 
     const [file, setFile] = useState(null);
+    const [updatedUser, setupdatedUser] = useState({})
     const [username, setUsername] = useState(" ");
     const [email, setEmail] = useState(" ");
+    const [imageLink, setImageLink] = useState(null)
     const [password, setPassword] = useState(" "); 
     const [success, setSuccess] = useState(false);
     const { user, dispatch } = useContext(Context);
-
-    // const PF = `${API}/images/`
+ 
+    useEffect(()=>{
+        const makePost = async() => {
+            updatedUser.profilePic = imageLink;
+            if(imageLink){
+                try {
+                    const response = await axios.put(`${API}/api/users/` + user._id, updatedUser);  
+                    setSuccess(true);
+                    dispatch({type:"UPDATE_SUCCESS", payload: response.data});
+                    window.location.replace('/');
+                } catch (error) { 
+                    dispatch({type:"UPDATE_FAILURE"});
+                }
+            }
+        };
+        makePost();
+    }, [imageLink, updatedUser, user._id, dispatch ])
         
-     const handleSubmit = async(e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         dispatch({type:"UPDATE_START"});
-        const updatedUser = { username, email, password, userId: user._id }
+        setupdatedUser({ username, email, password, userId: user._id })
 
         if(file){
-            const data = new FormData();
-            const filename = Date.now() + file.name;
-            data.append('name', filename);
-            data.append('file', file);
-            updatedUser.profilePic = filename;
+            const filename = file.name;
+            const storage = getStorage(app);
+            const storageRef = ref(storage, filename);
+            const uploadTask = uploadBytesResumable(storageRef, file);
            
-            try {
-                // await axios.post(`${API}/api/upload`, data)
-            } catch (error) {  }
-        }
-        try {
-            const response = await axios.put(`${API}/api/users/` + user._id, updatedUser);  
-            setSuccess(true);
-            dispatch({type:"UPDATE_SUCCESS", payload: response.data});
-            window.location.replace('/');
-        } catch (error) { 
-             dispatch({type:"UPDATE_FAILURE"});
+            uploadTask.on("state_changed",
+                (snapshot) => {
+                    const progress =
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log("Upload is " + progress + "% done");
+                    switch (snapshot.state) {
+                    case "paused":
+                        console.log("Upload is paused");
+                        break;
+                    case "running":
+                        console.log("Upload is running");
+                        break;
+                    default:
+                    }
+                },
+                (error) => {
+                    console.log("Upload failed", error);
+                },
+                () => {
+                    // Handle successful uploads on complete
+                    // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                        console.log(downloadURL);
+                        setImageLink(downloadURL);
+                    });
+                }
+            ); 
         }
     }
 
