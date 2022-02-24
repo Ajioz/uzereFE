@@ -15,8 +15,6 @@ import API from '../../api'
 
 export default function SinglePost() {
 
-    const PF = `${API}/images/`;
-
     const { postId } = useParams();
     const [post, setPost] = useState({});
     const { user } = useContext(Context);
@@ -78,7 +76,7 @@ export default function SinglePost() {
         <div className="container">
             <div className="space"></div>
             <div  className="container">
-                { post.photo && ( <img src={PF + post.photo} alt={post.title} className="singlePostImg" /> )}
+                { post.photo && ( <img src={post.photo} alt={post.title} className="singlePostImg" /> )}
                 
                 { updateMode ? (
                     <>
